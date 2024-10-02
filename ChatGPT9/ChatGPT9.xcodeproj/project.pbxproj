@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		FF0C467A2CAD7F8900315A3D /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF0C46792CAD7F8900315A3D /* OpenAISwift */; };
 		FF0C467D2CAD7FA300315A3D /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF0C467C2CAD7FA300315A3D /* OpenAISwift */; };
+		FF0C467F2CAD837500315A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C467E2CAD837500315A3D /* MainView.swift */; };
+		FF0C46802CAD837500315A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C467E2CAD837500315A3D /* MainView.swift */; };
+		FFDC93EF2CAD858900F6071E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC93EE2CAD858900F6071E /* String+Extensions.swift */; };
+		FFDC93F02CAD858900F6071E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC93EE2CAD858900F6071E /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		FF0C464C2CAD7F0100315A3D /* macOS-ChatGPT9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS-ChatGPT9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C465C2CAD7F0300315A3D /* macOS-ChatGPT9Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macOS-ChatGPT9Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C46662CAD7F0300315A3D /* macOS-ChatGPT9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macOS-ChatGPT9UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0C467E2CAD837500315A3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FFDC93EE2CAD858900F6071E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -163,6 +169,8 @@
 		FF0C46772CAD7F0E00315A3D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FFDC93ED2CAD855A00F6071E /* Extensions */,
+				FF0C467E2CAD837500315A3D /* MainView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -172,6 +180,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFDC93ED2CAD855A00F6071E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFDC93EE2CAD858900F6071E /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +442,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDC93EF2CAD858900F6071E /* String+Extensions.swift in Sources */,
+				FF0C467F2CAD837500315A3D /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +465,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFDC93F02CAD858900F6071E /* String+Extensions.swift in Sources */,
+				FF0C46802CAD837500315A3D /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
