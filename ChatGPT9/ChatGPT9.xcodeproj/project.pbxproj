@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B605E0E42D70B7280043E5A8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E0E32D70B7280043E5A8 /* MainView.swift */; };
+		B605E0E52D70B7280043E5A8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E0E32D70B7280043E5A8 /* MainView.swift */; };
+		B605E1092D70B87C0043E5A8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E1082D70B8680043E5A8 /* CoreDataManager.swift */; };
+		B605E10A2D70B87C0043E5A8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E1082D70B8680043E5A8 /* CoreDataManager.swift */; };
+		B605E10D2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B605E10B2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld */; };
+		B605E10E2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B605E10B2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld */; };
+		B605E1112D70BAA10043E5A8 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E1102D70BAA10043E5A8 /* Query.swift */; };
+		B605E1122D70BAA10043E5A8 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E1102D70BAA10043E5A8 /* Query.swift */; };
+		B605E1142D70BB0F0043E5A8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E1132D70BB0F0043E5A8 /* Model.swift */; };
+		B605E1152D70BB0F0043E5A8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E1132D70BB0F0043E5A8 /* Model.swift */; };
+		B6CB24852D70BFFC003C93CA /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CB24842D70BFFC003C93CA /* HistoryView.swift */; };
+		B6CB24862D70BFFC003C93CA /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CB24842D70BFFC003C93CA /* HistoryView.swift */; };
 		FF0C467A2CAD7F8900315A3D /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF0C46792CAD7F8900315A3D /* OpenAISwift */; };
 		FF0C467D2CAD7FA300315A3D /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF0C467C2CAD7FA300315A3D /* OpenAISwift */; };
-		FF0C467F2CAD837500315A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C467E2CAD837500315A3D /* MainView.swift */; };
-		FF0C46802CAD837500315A3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C467E2CAD837500315A3D /* MainView.swift */; };
 		FFDC93EF2CAD858900F6071E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC93EE2CAD858900F6071E /* String+Extensions.swift */; };
 		FFDC93F02CAD858900F6071E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC93EE2CAD858900F6071E /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -47,19 +57,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B605E0E32D70B7280043E5A8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B605E1082D70B8680043E5A8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B605E10C2D70B95C0043E5A8 /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
+		B605E1102D70BAA10043E5A8 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		B605E1132D70BB0F0043E5A8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B6CB24842D70BFFC003C93CA /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		FF0C461D2CAD7ED000315A3D /* iOS-ChatGPT9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-ChatGPT9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C462D2CAD7ED200315A3D /* iOS-ChatGPT9Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-ChatGPT9Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C46372CAD7ED200315A3D /* iOS-ChatGPT9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-ChatGPT9UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C464C2CAD7F0100315A3D /* macOS-ChatGPT9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS-ChatGPT9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C465C2CAD7F0300315A3D /* macOS-ChatGPT9Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macOS-ChatGPT9Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0C46662CAD7F0300315A3D /* macOS-ChatGPT9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macOS-ChatGPT9UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF0C467E2CAD837500315A3D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FFDC93EE2CAD858900F6071E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B6CB24822D70BF3E003C93CA /* Exceptions for "iOS-ChatGPT9" folder in "iOS-ChatGPT9" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FF0C461C2CAD7ED000315A3D /* iOS-ChatGPT9 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FF0C461F2CAD7ED000315A3D /* iOS-ChatGPT9 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B6CB24822D70BF3E003C93CA /* Exceptions for "iOS-ChatGPT9" folder in "iOS-ChatGPT9" target */,
+			);
 			path = "iOS-ChatGPT9";
 			sourceTree = "<group>";
 		};
@@ -138,6 +166,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B605E1062D70B8540043E5A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B605E0E32D70B7280043E5A8 /* MainView.swift */,
+				B6CB24842D70BFFC003C93CA /* HistoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B605E1072D70B85F0043E5A8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B605E1082D70B8680043E5A8 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B605E10F2D70BA850043E5A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B605E1102D70BAA10043E5A8 /* Query.swift */,
+				B605E1132D70BB0F0043E5A8 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FF0C46122CAD7E6200315A3D = {
 			isa = PBXGroup;
 			children = (
@@ -169,8 +223,11 @@
 		FF0C46772CAD7F0E00315A3D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B605E10F2D70BA850043E5A8 /* Models */,
+				B605E1072D70B85F0043E5A8 /* Managers */,
+				B605E1062D70B8540043E5A8 /* Views */,
 				FFDC93ED2CAD855A00F6071E /* Extensions */,
-				FF0C467E2CAD837500315A3D /* MainView.swift */,
+				B605E10B2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -442,8 +499,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B605E1122D70BAA10043E5A8 /* Query.swift in Sources */,
 				FFDC93EF2CAD858900F6071E /* String+Extensions.swift in Sources */,
-				FF0C467F2CAD837500315A3D /* MainView.swift in Sources */,
+				B605E10A2D70B87C0043E5A8 /* CoreDataManager.swift in Sources */,
+				B605E10D2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld in Sources */,
+				B605E0E52D70B7280043E5A8 /* MainView.swift in Sources */,
+				B605E1152D70BB0F0043E5A8 /* Model.swift in Sources */,
+				B6CB24862D70BFFC003C93CA /* HistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +528,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDC93F02CAD858900F6071E /* String+Extensions.swift in Sources */,
-				FF0C46802CAD837500315A3D /* MainView.swift in Sources */,
+				B605E1112D70BAA10043E5A8 /* Query.swift in Sources */,
+				B605E1092D70B87C0043E5A8 /* CoreDataManager.swift in Sources */,
+				B605E10E2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld in Sources */,
+				B605E0E42D70B7280043E5A8 /* MainView.swift in Sources */,
+				B6CB24852D70BFFC003C93CA /* HistoryView.swift in Sources */,
+				B605E1142D70BB0F0043E5A8 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +649,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-ChatGPT9/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -662,6 +730,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-ChatGPT9/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1500,6 +1569,19 @@
 			productName = OpenAISwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B605E10B2D70B95C0043E5A8 /* HistoryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B605E10C2D70B95C0043E5A8 /* HistoryModel.xcdatamodel */,
+			);
+			currentVersion = B605E10C2D70B95C0043E5A8 /* HistoryModel.xcdatamodel */;
+			path = HistoryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FF0C46132CAD7E6200315A3D /* Project object */;
 }

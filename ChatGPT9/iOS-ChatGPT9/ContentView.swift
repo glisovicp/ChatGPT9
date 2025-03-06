@@ -8,17 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var isPresented: Bool = false
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            MainView()
+                .sheet(isPresented: $isPresented, content: {
+                    NavigationStack {
+                        HistoryView()
+                            .navigationTitle("History")
+                    }
+                })
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            isPresented = true
+                        } label: {
+                            Text("Show History")
+                        }
+                    }
+                }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environment(\.managedObjectContext, CoreDataManager.shared.persistentContainer.viewContext)
+        .environmentObject(Model())
 }

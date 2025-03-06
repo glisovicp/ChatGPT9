@@ -11,7 +11,9 @@ import SwiftUI
 struct macOS_ChatGPT9App: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            // MainView()
+            ContentView()
+                .environment(\.managedObjectContext, CoreDataManager.shared.persistentContainer.viewContext)
         }
     }
 }

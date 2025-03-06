@@ -14,7 +14,7 @@ struct MainView: View {
 
     let openAI = OpenAISwift(config: .makeDefaultOpenAI(apiKey: "OPENAI_API_KEY"))
 
-    @State private var answers: [String] = []
+    @EnvironmentObject private var model: Model
 
     private var isFormValid: Bool {
         !chatText.isEmptyOrWhitespace
@@ -22,10 +22,16 @@ struct MainView: View {
 
     var body: some View {
         VStack{
-
-            List(answers, id: \.self) { answer in
-                Text(answer)
-            }
+            
+            List(model.queries, id: \.self) { query in
+                VStack(alignment: .leading) {
+                    Text(query.question)
+                        .fontWeight(.bold)
+                    Text(query.answer)
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.bottom], 10)
+                    .listRowSeparator(.hidden)
+            }.listStyle(.plain)
 
             Spacer()
             HStack {
@@ -44,6 +50,13 @@ struct MainView: View {
 
             }
         }.padding()
+//            .onChange(of: model.query) { query in
+//                model.queries.append(query)
+//            }
+            .onChange(of: model.query) { oldQuery, newQuery in
+                print("[ChatGPT9] [MainView] [\(#function)] >>> New query: \(newQuery)")
+                model.queries.append(newQuery)
+            }
     }
 
     // MARK: - Functions
@@ -56,7 +69,20 @@ struct MainView: View {
                 print("[ChatGPT9] [MainView] [\(#function)] >>> Success!")
                 // OpenAI<TextResult>(object: nil, model: nil, choices: nil, usage: nil, data: nil)
                 let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-                answers.append(answer)
+
+                let query = Query(question: chatText, answer: answer)
+                // Because queries are @Published in Model, we need to update them on the main thread.
+                DispatchQueue.main.async {
+                    model.queries.append(query)
+                }
+
+                do {
+                    try model.saveQuery(query)
+                } catch {
+                    print(error.localizedDescription)
+                }
+
+                chatText = ""
 
             case .failure(let failure):
                 print("[ChatGPT9] [MainView] [\(#function)] >>> Failure:\(failure)")
@@ -68,4 +94,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(Model())
 }
