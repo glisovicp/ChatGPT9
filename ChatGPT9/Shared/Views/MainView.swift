@@ -16,6 +16,8 @@ struct MainView: View {
 
     @EnvironmentObject private var model: Model
 
+    @State private var isSearching: Bool = false
+
     private var isFormValid: Bool {
         !chatText.isEmptyOrWhitespace
     }
@@ -52,6 +54,7 @@ struct MainView: View {
                     .textFieldStyle(.roundedBorder)
                 Button{
                     //action
+                    isSearching = true
                     performSearch()
                 } label: {
                     Image(systemName: "paperplane.circle.fill")
@@ -63,12 +66,14 @@ struct MainView: View {
 
             }
         }.padding()
-//            .onChange(of: model.query) { query in
-//                model.queries.append(query)
-//            }
             .onChange(of: model.query) { oldQuery, newQuery in
                 print("[ChatGPT9] [MainView] [\(#function)] >>> New query: \(newQuery)")
                 model.queries.append(newQuery)
+            }
+            .overlay(alignment: .center) {
+                if isSearching {
+                    ProgressView("Searching...")
+                }
             }
     }
 
@@ -96,8 +101,10 @@ struct MainView: View {
                 }
 
                 chatText = ""
+                isSearching = false
 
             case .failure(let failure):
+                isSearching = false
                 print("[ChatGPT9] [MainView] [\(#function)] >>> Failure:\(failure)")
             }
         }
